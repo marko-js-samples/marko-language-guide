@@ -1,0 +1,16 @@
+class {
+  onLanguageSelect() {
+  	var el = this.getEl('languageSelect');
+    var selected = el.options[el.selectedIndex].value;
+    this.emit('select-language', selected);
+  }
+}
+
+<div>
+	<select key="languageSelect" on-change('onLanguageSelect')>
+      <option selected value="English">English</option>
+      <option value="French">French</option>
+      <option value="Spanish">Spanish</option>
+    </select>
+</div>
+
