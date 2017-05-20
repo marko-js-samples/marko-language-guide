@@ -19,5 +19,8 @@
     "start": "marko-starter server",
     "build": "marko-starter build"
   },
-  "private": true
+  "private": true,
+  "tryOnline": {
+    "defaultOutputMode": "compiled"    
+  }
 }
