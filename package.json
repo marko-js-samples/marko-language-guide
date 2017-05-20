@@ -21,6 +21,6 @@
   },
   "private": true,
   "tryOnline": {
-    "defaultOutputMode": "compiled"    
+    "defaultOutputMode": "html"    
   }
 }
