@@ -1,7 +1,12 @@
-$ var colors = ['red', 'green', 'blue'];
+$ const colors = ["red", "green", "blue"];
 
 <ul>
-  <li for(i,color in colors)>
-    ${i+1}) ${color}
-  </li>
+  <for|color, i| of=colors>
+    <li>
+      ${i + 1}) ${color}
+      
+      <if(i === 0)>- FIRST</if>
+      <if(i === colors.length - 1)>- LAST</if>
+    </li>
+  </for>
 </ul>

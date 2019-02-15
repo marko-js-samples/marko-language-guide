@@ -1,8 +1,6 @@
-$ {
-  var linkTitle = 'abc';
-  // linkTitle = null;
-}
+$ const existingTitile = "abc";
+$ const missingTitle = undefined;
 
-<a href="#Hello" title=linkTitle>
-  Hello
-</a>
+<a href="#Hello" title=existingTitile>Hello</a>
+
+<a href="#Hello" title=missingTitle>Hello</a>

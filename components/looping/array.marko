@@ -1,16 +1,8 @@
-$ var colors = ['red', 'green', 'blue'];
+$ const colors = ["red", "green", "blue"];
 
-<!-- As attribute: -->
 <ul>
-  <li style={color: color} for(color in colors)>
-    ${color}
-  </li>
-</ul>
-
-<!-- As tag: -->
-<ul>
-  <for(color in colors)>
-    <li style={color: color}>
+  <for|color| of=colors>
+    <li style={ color: color }>
       ${color}
     </li>
   </for>

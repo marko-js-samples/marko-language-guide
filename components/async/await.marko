@@ -1,11 +1,21 @@
 $ var personPromise = new Promise((resolve, reject) => {
   setTimeout(function() {
     resolve({
-      name: 'Frank'
+      name: "Frank"
     });
   }, 1000);
 });
 
-<await(person from personPromise)>
-  <div>Hello ${person.name}!</div>
+<await(personPromise) timeout=5000>
+  <@placeholder>
+    Loading...
+  </@placeholder>
+
+  <@then|person|>
+    <div>Hello ${person.name}!</div>
+  </@then>
+
+  <@catch|err|>
+    Error: ${err.message}
+  </@catch>
 </await>
