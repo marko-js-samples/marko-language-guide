@@ -1,6 +1,11 @@
 <div>
   Hello ${input.name}!
-  <div if(input.renderBody)>
-    <include(input.renderBody)/>
-  </div>
+  <if(input.renderBody)>
+    <div>
+      <if(typeof input.renderBody === "string")>${input.renderBody}</if>
+      <else>
+        <${input.renderBody}/>
+      </else>
+    </div>
+  </if>
 </div>

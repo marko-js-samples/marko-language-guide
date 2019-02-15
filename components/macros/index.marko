@@ -1,10 +1,12 @@
-<macro greeting(name,color)>
-  <div class="greeting" style={backgroundColor: color}>
+<macro|{ name, color }| name="greeting">
+  <div
+    class="greeting"
+    style={
+      backgroundColor: color
+    }>
     Hello ${name}!
   </div>
 </macro>
 
-<!-- Macros can be invoked using the <invoke> tag -->
+<!-- Macros can be used like any other tag -->
 <greeting name="World" color="green"/>
-<!-- Or, macros can be invoked as a function call in an expression -->
-<greeting('Frank', 'yellow')/>

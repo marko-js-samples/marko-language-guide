@@ -1,15 +1,16 @@
-$ var name = 'Frank';
-$ var colors = ['red', 'green', 'blue'];
+$ const name = "Frank";
+<h1>Hello ${name}!</h1>
 
-<h1>
-  Hello ${name}!
-</h1>
-
-<ul if(colors.length)>
-  <li style={color: color} for(color in colors)>
-    ${color}
-  </li>
-</ul>
-<div else>
-  No colors!
-</div>
+$ const colors = ["red", "green", "blue"];
+<if(colors.length)>
+  <ul>
+    <for|color| of=colors>
+      <li style={ color: color }>
+        ${color}
+      </li>
+    </for>
+  </ul>
+</if>
+<else>
+  <div>No colors!</div>
+</else>

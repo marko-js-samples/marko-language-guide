@@ -1,11 +1,13 @@
-$ var person = {
-  firstName: 'John',
-  lastName: 'Doe',
+$ const person = {
+  firstName: "John",
+  lastName: "Doe",
   age: 20
 };
 
 <ul>
-  <li for(name,value in person)>
-    <b>${name}</b>: ${value}
-  </li>
+  <for|name, value| in=person>
+    <li>
+      <b>${name}</b>: ${value}
+    </li>
+  </for>
 </ul>

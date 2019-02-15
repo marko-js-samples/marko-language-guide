@@ -9,13 +9,15 @@
   "license": "MIT",
   "devDependencies": {
     "eslint": "^3.13.0",
-    "eslint-config-marko": "^1.0.1"
+    "eslint-config-marko": "^1.0.1",
+    "marko-cli": "^6.0.3"
   },
   "dependencies": {
-    "marko": "^4.4.28",
-    "marko-starter": "^2.0.1"
+    "marko": "^4.15.0",
+    "marko-starter": "^2.0.4"
   },
   "scripts": {
+    "format": "marko prettyprint ./index.marko ./components",
     "start": "marko-starter server",
     "serve-static": "marko-starter serve-static",
     "build": "marko-starter build",

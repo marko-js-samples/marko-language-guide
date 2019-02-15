@@ -1,2 +1,6 @@
-<include('./include-target.marko') name='Frank' />
-<include('./include-target.marko', { name: 'John' })/>
+import IncludeTarget from "./include-target.marko"
+
+<${IncludeTarget} name="Frank"/>
+<${IncludeTarget} ...{
+  name: "John"
+}/>

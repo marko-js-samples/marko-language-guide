@@ -1,13 +1,10 @@
-$ var isVisible = false;
+$ const isVisible = false;
 
-<div.counter>
-</div>
+<div.counter/>
 
-<div class=['counter', isVisible && 'vislbe']>
-</div>
+<div class=["counter", isVisible && "visible"]/>
 
 <div class={
-    counter: true,
-    visible: isVisible
-  }>
-</div>
+  counter: true,
+  visible: isVisible
+}/>

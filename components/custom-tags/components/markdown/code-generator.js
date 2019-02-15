@@ -1,19 +1,19 @@
 var marked = require('marked');
 
-function removeIndentation(str) {
-  var indentMatches = /\s*\n(\s+)/.exec(str);
-  if (indentMatches) {
-    var indent = indentMatches[1];
-    str = str.replace(new RegExp('^' + indent, 'mg'), '');
-  }
-  return str;
-}
-
-function generateCode(el, codegen) {
+module.exports = function generateCode(el, codegen) {
   var bodyText = removeIndentation(el.bodyText);
   var builder = codegen.builder;
   var html = marked(bodyText);
   return builder.html(builder.literal(html));
-}
+};
 
-module.exports = generateCode;
+function removeIndentation(str) {
+  var indentMatches = /\s*\n(\s+)/.exec(str);
+
+  if (indentMatches) {
+    var indent = indentMatches[1];
+    str = str.replace(new RegExp('^' + indent, 'mg'), '');
+  }
+
+  return str;
+}
