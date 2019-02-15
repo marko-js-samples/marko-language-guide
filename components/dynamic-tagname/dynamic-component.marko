@@ -4,10 +4,3 @@ import Goodbye from "./components/goodbye";
 $ const isLeaving = false;
 
 <${isLeaving ? Goodbye : Hello} name="Frank"/>
-
-<!-- Note: This may be better represented by just using the tags -->
-<if(isLeaving)>
-  <goodbye name="Frank"/>
-<else>
-  <hello name="Frank"/>
-</else>
